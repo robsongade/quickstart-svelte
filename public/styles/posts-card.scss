@@ -1,0 +1,10 @@
+.posts-card {
+    @include card;
+
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    gap: $defaultSpacing;
+
+}
+

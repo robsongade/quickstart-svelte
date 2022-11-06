@@ -1,0 +1,135 @@
+.projects-grid-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $defaultSpacing;
+
+    @media screen and (max-width: $largeScreen) {
+        grid-template-columns: 1fr;
+    }
+
+    > a {
+        @include card;
+
+        text-decoration: none;
+        padding: 0;
+        text-align: start;
+
+        outline: 2px solid transparent;
+
+        transition: outline-color 150ms ease-out;
+
+        &:hover,
+        &:focus {
+          > div {
+            background-color: var(--element-hover)
+          }
+        }
+
+        &:focus-visible {
+            outline-color: var(--element-hover-border);
+        }
+
+        > div {
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            gap: $defaultSpacing;
+      
+            padding: $defaultSpacing * 1.5;
+      
+            color: var(--high-contrast);
+            stroke: var(--high-contrast);
+      
+            border-radius: inherit;
+      
+            transition: background-color 150ms ease-out;
+            
+            > header {
+                display: flex;
+                align-items: center;
+                gap: calc($defaultSpacing / 2);
+
+                > strong {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+
+            > p {
+                margin: 0;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 400;
+        
+                color: var(--low-contrast);
+              }
+
+              > footer {
+                    align-self: stretch;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: $defaultSpacing;
+
+                    color: var(--low-contrast);
+                    stroke: var(--low-contrast);
+
+                > .info {
+                    display: flex;
+                    align-items: center;
+                    gap: $defaultSpacing;
+
+                    > div {
+                        display: flex;
+                        align-items: center;
+                        gap: calc($defaultSpacing / 2);
+                        
+                        > span {
+                            font: 14px;
+                            line-height: 20px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                > .lang {
+                    display: flex;
+                    align-items: center;
+                    gap: calc($defaultSpacing / 2);
+
+                    > .dot {
+                        $size: 8px;
+
+                        width: $size;
+                        height: $size;
+                        border-radius: $size;
+                        border: 2px solid var(--low-contrast);
+
+                        &.typescript {
+                            background-color: #2b7489;
+                        }
+
+                        &.javascript {
+                            background-color: #d6d304;
+                        }
+
+                        &.html {
+                            background-color: #e34c26;
+                        }
+
+                        &.scss {
+                            background-color: #c6538c;
+                        }
+                    }
+
+                    > span {
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-weight: 400;
+                    }
+                }
+              }
+
+        }
+    }
+}
