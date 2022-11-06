@@ -4,9 +4,7 @@
 
   
 
-![Quickstart Svelte ]https://github.com/robsongade/quickstart-svelte/blob/master/public/prints/preview.png)
-
-  
+![GraphCMS Headless Blog](https://raw.githubusercontent.com/robsongade/quickstart-svelte/main/public/prints/preview.png)
 
 ## Introdução
 
